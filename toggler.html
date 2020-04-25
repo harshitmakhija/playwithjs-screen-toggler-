@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js</title>
+</head>
+<body>
+<div id="outer"style="width: 120px;height: 35px;border: 5px solid black;border-radius: 80px;background-color: white;margin: 80px;">
+	<div id="inner"style="width: 20px;height: 20px;border: 4px solid white;border-radius: 80px;background-color: black;position: relative;top:2px;">
+		
+	</div>
+</div>
+<h1 id="h1"> Click the toggle button</h1>
+
+</body>
+<script type="text/javascript">
+var a="true";
+	var h=document.getElementsByTagName("h1");
+var b=document.getElementById("inner");
+
+b.addEventListener('click',myFunction)
+function myFunction() {
+  var myCollection = document.getElementById("inner");
+   var outer = document.getElementById("outer");
+  var h=document.getElementById("h1");
+  if(a=="false"){
+  myCollection.style.backgroundColor= "black";
+  outer.style.backgroundColor= "white";
+   myCollection.style.border= "4px solid white";
+  outer.style.border= "5px solid black";
+  a="true";
+    document.body.style.backgroundColor="white";
+       myCollection.style.left="0px";
+    myCollection.style.border= "4px solid white";
+   h.style.color="black";
+  
+  }
+  else{
+   outer.style.backgroundColor= "black";
+   myCollection.style.border= "4px solid black";
+     outer.style.border= "5px solid white";
+  myCollection.style.backgroundColor= "white";
+   myCollection.style.left="85px";
+   a="false";
+ document.body.style.backgroundColor="black";
+   h.style.color="white";
+  }
+    }
+ 
+
+</script>
+</html>
